@@ -2,6 +2,8 @@ services:
   - type: web
     name: telegram-silent-forward-bot
     env: python
-    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python forward_bot_silent.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
